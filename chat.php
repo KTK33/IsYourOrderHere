@@ -106,7 +106,7 @@ function auth(){
       
       if( json["head"]["status"] === false ){
          alert("ログインに失敗しました");
-         location.href = "/chat2/";
+         location.href = "/index.php";
        }
       else{
          alert("ログインに成功しました");
