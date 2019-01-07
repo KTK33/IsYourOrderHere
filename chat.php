@@ -73,7 +73,7 @@ window.onload = function(){
       var uname = document.querySelector("#uname").value;
       var msg   = document.querySelector("#msg").value;
       var request = new XMLHttpRequest();
-        request.open('POST', 'http://127.0.0.1/chat2/set.php', false);
+        request.open('POST', 'http://127.0.0.1/set.php', false);
         request.onreadystatechange = function(){
 		   if (request.status === 200 || request.status === 304 ) {
 			  var response = request.responseText;
@@ -98,7 +98,7 @@ window.onload = function(){
 };
 function auth(){
   var request = new XMLHttpRequest();
-  request.open('POST', 'http://127.0.0.1/chat2/auth.php', false);
+  request.open('POST', 'http://127.0.0.1/auth.php', false);
   request.onreadystatechange = function(){
     if (request.status === 200 || request.status === 304 ) {
       var response = request.responseText;
@@ -121,7 +121,7 @@ function auth(){
 }
 function getLog(){
 	var request = new XMLHttpRequest();	
-	request.open('GET', 'http://127.0.0.1/chat2/get.php', false);
+	request.open('GET', 'http://127.0.0.1/get.php', false);
 	request.onreadystatechange = function(){
 		if (request.status === 200 || request.status === 304 ) {
 			var response = request.responseText;
