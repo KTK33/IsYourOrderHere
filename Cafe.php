@@ -6,22 +6,25 @@
 		
 		<style>
 		#game-window
-		{			
+		{		
+			background-image:url(assets/CafeBack.jpg);
+			background-size:cover;
+			height:800px;
 		}
 		
 		#menu0_img
 		{
 			width:280px;
 			position:absolute;
-			top:60px;
-			left:60px;
+			top:160px;
+			left:460px;
 		}
 		#menu0_button
-		{
-			width:200px; height:50px;
+		{		
+		 	width:200px; height:50px;
 			position:absolute;
-			top:360px;
-			left:60px;
+			top:460px;
+			left:475px;
 			font-size:16pt;
 		}
 	
@@ -29,15 +32,15 @@
 		{
 			width:280px;
 			position:absolute;
-			top:60px;
-			left:360px;
+			top:160px;
+			left:810px;
 		}
 		#menu1_button
 		{
 			width:200px; height:50px;
 			position:absolute;
-			top:360px;
-			left:420px;
+			top:460px;
+			left:825px;
 			font-size:16pt;
 		}
 		
@@ -45,15 +48,15 @@
 		{
 			width:280px;
 			position:absolute;
-			top:60px;
-			left:660px;
+			top:160px;
+			left:1160px;
 		}
 		#menu2_button
 		{
 			width:200px; height:50px;
 			position:absolute;
-			top:360px;
-			left:720px;
+			top:460px;
+			left:1200px;
 			font-size:16pt;
 		}
 		
@@ -63,24 +66,17 @@
 
 	<body>
 		<div id="game-window">
-		
-				<img id="menu0_img" src="assets/name_neko.png">
-					<button id="menu0_button">コーヒー</button>
-				</img>
+				
+				<img id="menu0_img" src="assets/coffee.png">
+				<button id="menu0_button">コーヒー</button>
 
-				<img id="menu1_img" src="assets/牡蠣L.png">
-					<button id="menu1_button">紅茶</button>
-				</img>
-			
-				<img id="menu2_img" src="assets/秋刀魚R.png">
-					<button id="menu2_button">ココア</button>
-				</img>
-			
+
+				<img id="menu1_img" src="assets/caramel.png">
+				<button id="menu1_button">キャラメル</button>
+
+				<img id="menu2_img" src="assets/Ice_coffee.png">
+				<button id="menu2_button">アイスコーヒー</button>
 		</div>
-		
-		<script>
-			gw=document.querySelector("#game-window");
-		</script>
 		
 	</body>
 </html>
