@@ -7,6 +7,7 @@ $fortunes = array(
 );
 
   setcookie("menu",$_GET["menu"]);
+  setcookie("menu_guest",$_GET["menu_guest"]);
   //$i = mt_rand(0, count($fortunes) -1);
   $i = $_GET["menu"];
   $image = $fortunes[$i];
@@ -100,6 +101,7 @@ $fortunes = array(
 				<img id="menu0_img" src="<?php echo $image; ?>"></img>
 				<form action="VoD.php">
 				<input type="hidden" name="menu"  value="<?= $_GET['menu'] ?>">
+				<input type="text" name="menu_guest"  value="<?= $_GET['menu_guest'] ?>">
 				<button id="menu0_button">次へ</button>
 				</form>
 		</div>
