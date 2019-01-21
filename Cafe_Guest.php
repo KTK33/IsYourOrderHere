@@ -9,48 +9,77 @@
 		{			
 		}
 		
+		div{
+			max-width: 50%;
+ 			margin: 0 auto;
+ 			text-align : center;
+		}
+		
 		#menuBook
 		{
-			width:280px;
-			position:absolute;
-			top:60px;
-			left:100px;
 		}
-
 		
-		#menu0
-		{
-			width:280px;
-			position:absolute;
-			top:100px;
-			left:130px;
+		#Coffee{
+			position: absolute;
+			top: 35%; 
+			left : 50%;
+			max-width: 50%;
+ 			margin: 0 auto;
+   			display: inline-block;
+    		padding: 0.25em 0.5em;
+    		text-decoration: none;
+    		color: white;
+    		background: black;
+    		border-radius: 4px;
+    		box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+    		font-weight: bold;
+    		border: solid 2p green;
 		}
-		#menu1
-		{
-			width:280px;
-			position:absolute;
-			top:200px;
-			left:130px;
+		#Caramel{
+			position: absolute;
+			top: 60%; 
+			left : 50%;
+ 			max-width: 50%;
+ 			margin: 0 auto;
+   			display: inline-block;
+    		padding: 0.25em 0.5em;
+    		text-decoration: none;
+    		color: white;
+    		background: darkorange;
+    		border-radius: 4px;
+    		box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+    		font-weight: bold;
+    		border: solid 2p green;
 		}
-		#menu2
-		{
-			width:280px;
-			position:absolute;
-			top:300px;
-			left:130px;
+		#IceCoffee{
+			position: absolute;
+			top: 85%; 
+			left : 50%;
+			max-width: 50%;
+ 			margin: 0 auto;
+   			display: inline-block;
+    		padding: 0.25em 0.5em;
+    		text-decoration: none;
+    		color: white;
+    		background: sienna;
+    		border-radius: 4px;
+    		box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+    		font-weight: bold;
+    		border: solid 2p green;
 		}
+		
 		</style>
 		
 	</head>
 
 	<body>
 		<div id="game-window">
-			<img id="menuBook" src="assets/menu.png">
-			<img id="menu0" src="assets/coffee.png">
-			<img id="menu1" src="assets/Ice_coffee.png">
-			<img id="menu2" src="assets/caramel.png">
+			<img id="menuBook"src="assets/menu.png">
 		</div>
-		
+			<input type="button"style="WIDTH: 200px; HEIGHT: 50px" id="Coffee" value="コーヒー">
+			<input type="button"style="WIDTH: 200px; HEIGHT: 50px" id="IceCoffee" value="アイスコーヒー">
+			<input type="button"style="WIDTH: 200px; HEIGHT: 50px" id="Caramel" value="キャラメル">
+			
 		<script>
 			gw=document.querySelector("#game-window");
 		</script>
