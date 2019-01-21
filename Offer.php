@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+<?php
+	setcookie("menu",$_GET["menu"]);
+?><!DOCTYPE html>
 
 <html>
 	<head>
@@ -7,7 +9,7 @@
 		<style>
 		#game-window
 		{		
-			background-image:url(assets/CafeBack.jpg);
+			//background-image:url(assets/CafeBack.jpg);
 			background-size:cover;
 			height:800px;
 		}
@@ -66,22 +68,14 @@
 
 	<body>
 		<div id="game-window">
-				<form action="Result.php">
-					<img id="menu0_img" src="assets/coffee.png">
-					<input type="hidden" name="menu"  value="1">
-					<button id="menu0_button">コーヒー</button>
-				</form>
-
-				<form action="Result.php">
-					<img id="menu1_img" src="assets/caramel.png">
-					<input type="hidden" name="menu"  value="2">
-					<button id="menu1_button">キャラメル</button>
-				</form>
-				
-				<form action="Result.php">
-					<img id="menu2_img" src="assets/Ice_coffee.png">
-					<input type="hidden" name="menu"  value="3">
-					<button id="menu2_button">アイスコーヒー</button>
+				<form action="Good.php">
+					<?php
+	 					echo $_GET['menu'];
+					?>
+					<input type="hidden" name="menu" value="<?= $_GET['menu'] ?>">
+					<img id="menu1_img" src="assets/coffee.png">
+					<button id="menu1_button"><?= $_GET['menu'] ?></button>
+					
 				</form>
 		</div>
 		
