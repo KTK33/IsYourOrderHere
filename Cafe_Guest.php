@@ -5,8 +5,11 @@
 		<title>客メニュー</title>
 		
 		<style>
-		#game-window
-		{			
+		#game-window{}
+		
+		body{
+			background-image:url(assets/CafeBack.jpg);
+			background-size:cover;
 		}
 		
 		div{
@@ -15,13 +18,12 @@
  			text-align : center;
 		}
 		
-		#menuBook
-		{
-		}
+		#menuBook{}
 		
 		#Coffee{
 			position: absolute;
-			top: 35%; 
+			top: auto;
+			top: 250px; 
 			left : 50%;
 			max-width: 50%;
  			margin: 0 auto;
@@ -37,7 +39,8 @@
 		}
 		#Caramel{
 			position: absolute;
-			top: 60%; 
+			top: auto;
+			top: 425px; 
 			left : 50%;
  			max-width: 50%;
  			margin: 0 auto;
@@ -53,7 +56,8 @@
 		}
 		#IceCoffee{
 			position: absolute;
-			top: 85%; 
+			top: auto;
+			top: 600px; 
 			left : 50%;
 			max-width: 50%;
  			margin: 0 auto;
@@ -70,15 +74,34 @@
 		
 		#gazo{
 			position: absolute;
-			top: 20%; 
-			left : 70%;		
+			max-width: 50%;
+ 			margin: 0 auto;
+ 			text-align : center;
+ 			top: 100px;
+		}
+		
+		#menu0_button{
+			position: absolute;
+			top: auto;
+			top: 800px; 
+			left : 50%;
+			max-width: 50%;
+ 			margin: 0 auto;
+   			display: inline-block;
+    		padding: 0.25em 0.5em;
+    		text-decoration: none;
+    		color: white;
+    		background: red;
+    		border-radius: 4px;
+    		box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+    		font-weight: bold;
+    		border: solid 2p green;
 		}
 		</style>
 		
 		<script>
 		
 			function Initialize(){
-			var n=0;
 			document.getElementById("Coffee").disabled = false;
 			document.getElementById("Caramel").disabled = false;
 			document.getElementById("IceCoffee").disabled = false;
@@ -95,17 +118,18 @@
 		
 		<form action="Result.php">
 			<input type="button"style="WIDTH: 200px; HEIGHT: 50px" id="Coffee" value="コーヒー" onClick="Decision(1);">
-			<input type="hidden" name="menu_guest"  value="1">
-			<button id="menu0_button">コーヒー</button>
-		</form>
 			<input type="button"style="WIDTH: 200px; HEIGHT: 50px" id="Caramel" value="キャラメル" onClick="Decision(2);">
 			<input type="button"style="WIDTH: 200px; HEIGHT: 50px" id="IceCoffee" value="アイスコーヒー" onClick="Decision(3);">
-
+			
+			<input type="hidden" id="Num" name="menu_guest"  value="1">
+			<button id="menu0_button" style="WIDTH: 200px; HEIGHT: 50px">決定</button>
+		</form>
 		<script script language="javascript" type="text/javascript">
 			gw=document.querySelector("#game-window");
 							
 			function Decision(NUM){
-				n = NUM;
+				
+				document.getElementById('Num').value=NUM;
 				
 				if ( NUM == 1 ) {
 					document.getElementById("gazo").src="assets/coffee.png";
