@@ -5,6 +5,7 @@ $fortunes = array(
     2 =>'img',
     3 =>'img',
 );
+
   setcookie("menu",$_GET["menu"]);
   //$i = mt_rand(0, count($fortunes) -1);
   $i = $_GET["menu"];
@@ -21,7 +22,9 @@ $fortunes = array(
 		break;
 
 		case 3:
+
 		$image="assets/Ice_coffee.png";
+
 		break;
 
 		default:

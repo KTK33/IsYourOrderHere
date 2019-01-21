@@ -5,13 +5,16 @@ $fortunes = array(
     2 =>'img',
     3 =>'img',
 );
+
   setcookie("menu",$_GET["menu"]);
   $i = $_GET["menu"];
+
   $image = $fortunes[$i];
   
   	switch($i)
 	{
 		case 1:
+
 		$image="assets/coffee.png";
 		break;
 
