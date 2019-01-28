@@ -6,11 +6,20 @@ $fortunes = array(
     3 =>'img',
 );
 
+$Vod = array(
+    0 =>'img',
+    1 =>'img',
+    2 =>'img',
+    3 =>'img',
+);
   setcookie("menu",$_GET["menu"]);
+  setcookie("menu_guest",$_GET["menu_guest"]);
   $i = $_GET["menu"];
+  $i2 = $_GET["menu_guest"];
 
   $image = $fortunes[$i];
-  
+  $image2 = $Vod[$i2];
+   
   	switch($i)
 	{
 		case 1:
@@ -30,6 +39,14 @@ $fortunes = array(
 		$image="assets/coffee.png";
 		break;
 	}
+	
+		if($i===$i2){
+			$image2 = "assets/win.png";
+		}
+		else{
+			$image2 = "assets/lose.png";
+		}
+		
 
 ?><!DOCTYPE html>
 
@@ -38,8 +55,10 @@ $fortunes = array(
 		<title>Result</title>
 		
 		<style>
-		#game-window
+		body
 		{			
+			background-image:url(assets/CafeBack.jpg);
+			background-size:cover;
 		}
 		
 		#menu0_img
@@ -98,12 +117,11 @@ $fortunes = array(
 		<div id="game-window">
 				<img id="menu0_img" src="<?php echo $image; ?>">
 				</img>
-				<img id="menu0_button" src="win.png"></img>
+				<img id="menu0_button" src="<?php echo $image2; ?>"></img>
 		</div>
 		
 		<script>
-		if(true){
-		}
+
 			gw=document.querySelector("#game-window");
 		</script>
 		

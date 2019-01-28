@@ -40,8 +40,10 @@ $fortunes = array(
 		<title>Result</title>
 		
 		<style>
-		#game-window
+		body
 		{			
+				background-image:url(assets/CafeBack.jpg);
+				background-size:cover;
 		}
 		
 		#menu0_img
